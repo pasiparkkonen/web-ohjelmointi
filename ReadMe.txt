@@ -1,0 +1,1 @@
+This public repository is for my school works purpose only
