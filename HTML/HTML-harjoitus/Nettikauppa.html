@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Nettikauppa</title>
+    </head>
+    <body>
+        <h1>Nettikaupan rekisteröitymislomake</h1>
+        <form>
+            <div>
+                <!--
+                    Yhteystieto lomakekentät:
+                    Etunimi Sukunimi
+                    Katuosoite
+                    Postinumero
+                    Postitoimipaikka
+                    Puhelinnumero
+                    Sähköposti
+                -->
+                <h2>Yhteystiedot:</h2><br>
+                <div class="yhteystiedot">
+                    <label for="nimi">Nimi:</label>
+                    <input id="nimi" type="text" name="Nimi" placeholder="Etunimi Sukunimi" required>
+
+                    <label for="osoite">Katuosoite:</label>
+                    <input id="osoite" type="text" name="Katuosoite" placeholder="Alkukatu 1 A 11">
+
+                    <label for="postinumero">Postinumero:</label>
+                    <input id="postinumero" type="number" name="Postinumero" placeholder="00100" maxlength="5">
+
+                    <label for="postitoimipaikka">Postitoimipaikka:</label>
+                    <input id="postitoimipaikka" type="text" name="Postitoimipaikka" placeholder="Kaupunki">
+
+                    <label for="puhelinnumero">Puhelinnumero:</label>
+                    <input id="puhelinnumero" type="text" name="Puhelinnumero" placeholder="+358401234567">
+
+                    <label for="sposti">Sähköposti:</label>
+                    <input id="sposti" type="email" name="Sähköposti" placeholder="Jokusähköposti@plvtrj.fi" required>
+                </div>
+            </div>
+            <div>
+                <!--
+                    Salasana kenttä
+                -->
+                <h2>Salanan valinta:</h2><br>
+                <div class="salasana">
+                    <label for="password">Salasana:</label>
+                    <input id="password" type="password" name="Salasana" maxlength="8" required>
+                </div>
+            </div>
+            <div>
+                <!-- Valintaruutu
+                    Muoti
+                    Urheilu
+                    Sisustaminen
+                    Pelit
+                    Elokuvat
+                -->
+                <h2>Mistä osastoista olet kiinnostunut?</h2><br>
+                <div class="osastot">
+                    <label for="checkbox">Osastot:</label>
+                    <input type="checkbox" >
+                </div>
+            </div>
+            <div class="maksutapa">
+                <!--
+                    Pudotusvalikko maksutavan valintaan
+                    Sampo
+                    Nordea
+                    Osuuspankki
+                    Aktia
+                -->
+            </div>
+            <div class="annapalaute">
+                <!--
+                    Anna palaute 4xtekstikenttä
+                -->
+            </div>
+            <div class="hyväksyehdot">
+                <!--
+                    Lukenut ja hyväksynyt toimitusehdot radiopainike
+                -->
+            </div>
+            <div class="lähetäpainike">
+                <!--
+                    Lähetä painike
+                -->
+            </div>
+        </form>
+    </body>
+</html>

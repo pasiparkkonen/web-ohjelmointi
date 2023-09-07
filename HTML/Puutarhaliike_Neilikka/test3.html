@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="Images/image1.jpg" alt="Image 1">
+        <img src="Images/image2.jpg" alt="Image 2">
+        <img src="Images/image3.jpg" alt="Image 3">
+        <!-- Add more images as needed -->
+    </div>
+
+    <script>
+        // You can add JavaScript for interactivity here if required.
+    </script>
+</body>
+</html>

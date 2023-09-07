@@ -1,0 +1,130 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+header {
+    background-color: #5ab368;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/*.navimage {
+    background-image: url(../Images/navikointi-kuva.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    flex-wrap: wrap;
+    
+}*/
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 20px /*auto*/;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.article {
+    text-align: left;
+    /*padding: 100px 0;*/
+    padding: 100%;
+    flex-wrap: wrap;
+    background-image: url(../Images/navikointi-kuva.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-image: url(../Images/navikointi-kuva.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery img {
+    max-width: 300px;
+    height: 300px;
+}
+
+/* Default styles for mobile */
+.grid-container-flex {
+    display: flex;
+    flex-direction: column;
+    background-color: purple;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+    height: 9em;
+}
+
+.grid-container-grid {
+    display: grid;
+    grid-template-columns: 20em;
+    height: 8em;
+    font-size: 1.1rem;
+}
+
+/* Media query for tablets and mobile devices */
+@media (min-width: 768px) {
+    .grid-container-flex {
+      font-size: 1.3rem;
+    }
+
+    .grid-container-grid {
+      grid-template-columns: none;
+      height: 10em;
+    }
+}
+
+/* Media query for desktops */
+@media (min-width: 1024px) {
+    .grid-container-flex {
+      font-size: 2rem;
+    }
+
+    .grid-container-grid {
+      grid-template-columns: none;
+      height: 12em;
+    }
+}
+
+/*.featured-products {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}*/
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #134d18;
+    color: #fff;
+    /*padding: 10px 0;*/
+}
