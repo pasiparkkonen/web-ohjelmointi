@@ -137,6 +137,19 @@ textarea {
     background-color: darkgreen;
 }
 
+/* Kuvagalleria styling */
+
+.galleria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
 /* Footer styling */
 .footer {
     position: relative;
