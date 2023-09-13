@@ -7,87 +7,134 @@
         <title>Nettikauppa</title>
     </head>
     <body>
-        <h1>Nettikaupan rekisteröitymislomake</h1>
-        <form>
-            <div>
-                <!--
-                    Yhteystieto lomakekentät:
-                    Etunimi Sukunimi
-                    Katuosoite
-                    Postinumero
-                    Postitoimipaikka
-                    Puhelinnumero
-                    Sähköposti
-                -->
-                <h2>Yhteystiedot:</h2><br>
-                <div class="yhteystiedot">
-                    <label for="nimi">Nimi:</label>
-                    <input id="nimi" type="text" name="Nimi" placeholder="Etunimi Sukunimi" required>
-
-                    <label for="osoite">Katuosoite:</label>
-                    <input id="osoite" type="text" name="Katuosoite" placeholder="Alkukatu 1 A 11">
-
-                    <label for="postinumero">Postinumero:</label>
-                    <input id="postinumero" type="number" name="Postinumero" placeholder="00100" maxlength="5">
-
-                    <label for="postitoimipaikka">Postitoimipaikka:</label>
-                    <input id="postitoimipaikka" type="text" name="Postitoimipaikka" placeholder="Kaupunki">
-
-                    <label for="puhelinnumero">Puhelinnumero:</label>
-                    <input id="puhelinnumero" type="text" name="Puhelinnumero" placeholder="+358401234567">
-
-                    <label for="sposti">Sähköposti:</label>
-                    <input id="sposti" type="email" name="Sähköposti" placeholder="Jokusähköposti@plvtrj.fi" required>
+        <header>
+            <div class="headertitle">
+                <h1>Nettikaupan rekisteröitymislomake</h1>
+            </div>
+            <div class="navigationarea">
+                <nav id="navigation-container"></nav>
+            </div>
+        </header>
+        <div class="bodyarea">
+            <form>
+                <div>
+                    <!--
+                        Yhteystieto lomakekentät:
+                        Etunimi Sukunimi
+                        Katuosoite
+                        Postinumero
+                        Postitoimipaikka
+                        Puhelinnumero
+                        Sähköposti
+                    -->
+                    <fieldset class="yhteystiedot">
+                        <Legend>Yhteystiedot</Legend>
+                        <table>
+                            <p>
+                                Lisää tarvittavat yhteystiedot tänne rekisteröitymistarkoituksessa tai tuotteiden 
+                                ostamistarkoituksessa.
+                            </p>
+                            <tr><td><label for="nimi">Nimi:</label></td><td><input id="nimi" type="text" name="Nimi" placeholder="Etunimi Sukunimi" required></td></tr>
+                            <tr><td><label for="osoite">Katuosoite:</label></td><td><input id="osoite" type="text" name="Katuosoite" placeholder="Omakatu 1 A 11"></td></tr>
+                            <tr><td><label for="postinumero">Postinumero:</label></td><td><input id="postinumero" type="number" name="Postinumero" placeholder="00100" maxlength="5"></td></tr>
+                            <tr><td><label for="postitoimipaikka">Postitoimipaikka:</label></td><td><input id="postitoimipaikka" type="text" name="Postitoimipaikka" placeholder="Kaupunki"></td></tr>
+                            <tr><td><label for="puhelinnumero">Puhelinumero:</label></td><td><input id="puhelinnumero" type="text" name="Puhelinnumero" placeholder="+358401234567"></td></tr>
+                            <tr><td><label for="sposti">Sähköposti:</label></td><td><input id="sposti" type="email" name="Sähköposti" placeholder="Jokusähköposti@plvtrj.fi" required></td></tr>
+                        </table>
+                    </fieldset>
+                    
                 </div>
-            </div>
-            <div>
-                <!--
-                    Salasana kenttä
-                -->
-                <h2>Salanan valinta:</h2><br>
-                <div class="salasana">
-                    <label for="password">Salasana:</label>
-                    <input id="password" type="password" name="Salasana" maxlength="8" required>
+                <div>
+                    <!--
+                        Salasana kenttä
+                    -->
+                    <fieldset class="salasana">
+                        <Legend>Salasanan valinta</Legend>
+                        <table>
+                            <p>
+                                Lisää salasana omillesivuille pääsemiseksi.
+                            </p>
+                            <tr><td><label for="password">Salasana:</label></td><td><input id="password" type="password" name="Salasana" maxlength="8" required></td></tr>
+                        </table>
+                    </fieldset>
                 </div>
-            </div>
-            <div>
-                <!-- Valintaruutu
-                    Muoti
-                    Urheilu
-                    Sisustaminen
-                    Pelit
-                    Elokuvat
-                -->
-                <h2>Mistä osastoista olet kiinnostunut?</h2><br>
-                <div class="osastot">
-                    <label for="checkbox">Osastot:</label>
-                    <input type="checkbox" >
+                <div>
+                    <!-- Valintaruutu
+                        Muoti
+                        Urheilu
+                        Sisustaminen
+                        Pelit
+                        Elokuvat
+                    -->
+                    <fieldset class="osastot">
+                        <table>
+                            <Legend>Mistä muista ostoksista olet kiinnostunut?</Legend>
+                            <p>
+                                Lisää alustavasti osastot, joilta haluat tehdä ostoksia.
+                            </p>
+                            <tr><td><label for="osastovalinta1">Muoti</label></td><td><input id="osastovalinta1" type="checkbox" name="Muoti"></td></tr>
+                            <tr><td><label for="osastovalinta2">Urheilu</label></td><td><input id="osastovalinta2" type="checkbox" name="Urheilu"></td></tr>
+                            <tr><td><label for="osastovalinta3">Sisustaminen</label></td><td><input id="osastovalinta3" type="checkbox" name="Sisustaminen"></td></tr>
+                            <tr><td><label for="osastovalinta4">Pelit</label></td><td><input id="osastovalinta4" type="checkbox" name="Pelit"></td></tr>
+                            <tr><td><label for="osastovalinta5">Elokuvat</label></td><td><input id="osastovalinta5" type="checkbox" name="Elokuvat"></td></tr>
+                        </table>
+                    </fieldset>
                 </div>
-            </div>
-            <div class="maksutapa">
-                <!--
-                    Pudotusvalikko maksutavan valintaan
-                    Sampo
-                    Nordea
-                    Osuuspankki
-                    Aktia
-                -->
-            </div>
-            <div class="annapalaute">
-                <!--
-                    Anna palaute 4xtekstikenttä
-                -->
-            </div>
-            <div class="hyväksyehdot">
-                <!--
-                    Lukenut ja hyväksynyt toimitusehdot radiopainike
-                -->
-            </div>
-            <div class="lähetäpainike">
-                <!--
-                    Lähetä painike
-                -->
-            </div>
-        </form>
+                <div>
+                    <!--
+                        Pudotusvalikko maksutavan valintaan
+                        Sampo
+                        Nordea
+                        Osuuspankki
+                        Aktia
+                    -->
+                    <fieldset class="maksutapa">
+                        <Legend>Maksutapa</Legend>
+                        <p>
+                            Ostettaessa tuotetta valitse maksutapa.
+                        </p>
+                        <div class="pudotusvalikko">
+                            <button class="pudotusvalikkonappi">Valitse pankki</button>
+                            <div class="valintasisältö">
+                                <div id="valintajoukko"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <!--
+                        Anna palaute 4xtekstikenttä
+                    -->
+                    <fieldset class="annapalaute">
+                        <Legend>Anna palautetta</Legend>
+                        <p>
+                            Tästä voit antaa meille palautetta.
+                        </p>
+                        <textarea rows="4" cols="40"></textarea>
+                    </fieldset>
+                </div>
+                <div>
+                    <!--
+                        Lukenut ja hyväksynyt toimitusehdot radiopainike
+                    -->
+                    <fieldset class="hyväksyehdot">
+                        <Legend>Hyväksy toimitusehdot ja lähetä</Legend>
+                        <p>
+                            Toimituksen hyväksymiseksi sinun on valittava hyväksy 
+                            tai hylkää valinta luettuasi <a href="toimitusehdot.html"> toimitusehdot</a>.
+                        </p>
+                        <table>
+                            <tr><td><label for="hyväksy">Hyväksy</label><input type="radio" id="hyväksy" name="valinta" required></td><td><label for="hylkää">Hylkää</label><input type="radio" id="hylkää" name="valinta" required></td></tr>
+                            <tr><td><input type="submit" value="Lähetä"></td></tr>
+                        </table>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Web-ohjelmointi kurssi</p>
+        </div>
+        <script src="navigointi.js"></script>
+        <script src="valintajoukko.js"></script>
     </body>
 </html>
